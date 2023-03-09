@@ -147,8 +147,9 @@ export class AppController {
         `DELETE /repos/${req.body.username}/${req.body.repoName}`,
       );
     } catch (e: any) {
+      console.log(e);
       res.redirect(`/home?username=${req.body.username}`);
-      return {};
+      //return {};
     }
     return { repoName: req.body.repoName, username: req.body.username };
   }
